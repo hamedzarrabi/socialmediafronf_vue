@@ -1,6 +1,16 @@
-import { createApp } from 'vue'
+import {createApp} from 'vue'
 import App from './App.vue'
 import router from './router'
 import store from './store'
+import vuetify from './plugins/vuetify'
+import './assets/tailwind.css'
+import Toast from 'vue-toastification';
+import 'vue-toastification/dist/index.css';
+import 'vuetify/dist/vuetify.min.css'
 
-createApp(App).use(store).use(router).mount('#app')
+createApp(App)
+    .use(router)
+    .use(store)
+    .use(vuetify)
+    .use(Toast)
+    .mount('#app')
